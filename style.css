@@ -332,7 +332,8 @@
   margin-top: 5px;
 }
 
-/* Footer */
+/* Footer - I've used Google and AI for footer styling
+ not for all...but to get ot done fast and some parts I couldn't just tackle and I had to submit today(friday) */
 
 footer {
   background-color: #16253d;
@@ -397,4 +398,33 @@ footer {
   gap: auto;
   margin-top: 18px;
   margin-right: 5px;
+}
+
+/* Media */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid,
+  .info-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
