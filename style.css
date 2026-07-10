@@ -53,14 +53,19 @@
 .hero {
   display: flex;
   background-color: rgb(199, 223, 249);
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px auto;
+  gap: 5rem;
+}
+
+.hero-div {
+  flex: 1;
+  max-width: 520px;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  flex: 1;
   color: #333;
   line-height: 1.1;
 }
@@ -69,30 +74,45 @@
   color: #555;
 }
 
+.heroBtn1,
+.heroBtn2 {
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .heroBtn1 {
   background-color: rgb(31, 81, 230);
   color: white;
-  padding: 7px 14px;
   border: 1px blue;
   border-radius: 4px;
-  margin: 5px;
+}
+
+.heroBtn1:hover {
+  transition: 0.3s ease-in-out;
+  background-color: rgb(7, 42, 146);
+  transform: scale(1.05);
 }
 
 .heroBtn2 {
   background-color: rgb(200, 214, 254);
   color: rgb(31, 81, 230);
-  padding: 7px 14px;
   border: 1px solid #2563eb;
-  border-radius: 4px;
+  margin-left: 7px;
+}
+
+.heroBtn2:hover {
+  transition: 0.5s ease-in-out;
+  transform: scale(1.05);
+  background-color: rgb(8, 38, 119);
+  color: white;
 }
 
 .hero-img {
   display: block;
   width: 100%;
   max-width: 400px;
-  top: 0;
-  right: 0;
-  flex: 1;
+  flex: 0 1 400px;
 }
 
 /* Services section */
@@ -238,7 +258,9 @@
 }
 
 .info-grid article .submit:hover {
-  background: #1d4ed8;
+  transition: 0.4s ease-in-out;
+  transform: scale(1.01);
+  background: #b10606;
 }
 
 .info-grid article p {
