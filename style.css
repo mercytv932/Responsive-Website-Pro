@@ -59,7 +59,7 @@
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   flex: 1;
   color: #333;
   line-height: 1.1;
@@ -107,9 +107,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* text-align: center; */
 }
 
 .services h2 {
@@ -118,18 +115,31 @@
   color: #333;
 }
 
-.services p {
+.services > p {
   margin: 0 auto 12px;
   color: #555;
 }
 
 .services-grid article {
   display: flex;
-  padding: 7px 7px 10px;
+  padding: 15px; /*just 15px later it works*/
+  text-align: left;
   flex-direction: column;
   background-color: white;
   border: 2px solid #dddddd;
   border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.services-grid article h3 {
+  margin: 0 0 8px;
+}
+
+.services-grid article p {
+  margin: 0 0 12px;
+  color: #555;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .services-grid article button {
@@ -138,4 +148,101 @@
   padding: 3px 5px;
   border: none;
   border-radius: 3px;
+}
+
+/* Info section */
+
+.info {
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.info-grid h2 {
+  font-size: 24px;
+  margin: 0 0 7px;
+  color: #333;
+}
+
+.info-grid p {
+  margin: 0 auto 12px;
+  color: #555;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.info-grid article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  padding: 7px 7px 10px;
+  background-color: white;
+  border: 2px solid #dddddd;
+  text-align: left;
+}
+
+.info-grid article label {
+  display: block;
+  text-align: left;
+  font-weight: 600px;
+  margin-bottom: 2px;
+  color: #333;
+}
+
+.info-grid article div {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.info-grid article .input {
+  width: auto;
+  flex: 1;
+  padding: auto 7px;
+  font-size: 12x;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.info-grid article .input::placeholder {
+  color: #999;
+}
+
+.info-grid article .input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(937, 99, 235, 0.15);
+}
+
+.info-grid article .submit {
+  width: auto;
+  flex: 0 0 auto;
+  margin: 0;
+  background-color: rgb(31, 81, 230);
+  color: white;
+  font-size: 16px;
+  padding: 7px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: backround 0.2s ease;
+}
+
+.info-grid article .submit:hover {
+  background: #1d4ed8;
+}
+
+.info-grid article p {
+  text-align: left;
+  margin-left: 3px;
+  margin-top: 5px;
 }
